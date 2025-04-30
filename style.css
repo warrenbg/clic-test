@@ -1,26 +1,138 @@
-@media (max-width: 600px) {
-    body {
-      padding: 10px;
-      font-size: 16px;
-    }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(145deg, #5e72e4, #825ee4);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    width: 250px;
+    max-width: 90%;
+    text-align: center;
+    outline: none;
+  }
+  
+  button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    background: #fff;
+    color: #5e72e4;
+  }
+  
+  button:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  #compteur, #resultat, #classement {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  #topScores {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+  
+  #topScores h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+  }
+  
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Animation flamme */
+  .flames {
+    animation: flame 0.3s infinite alternate;
+    background: linear-gradient(45deg, #ff6a00, #ff0000);
+    color: white !important;
+  }
+  
+  @keyframes flame {
+    0% {
+      box-shadow: 0 0 10px #ff0000;
+      transform: scale(1);
+    }
+    100% {
+      box-shadow: 0 0 20px #ff6a00;
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
     h1 {
-      font-size: 28px;
+      font-size: 2rem;
     }
   
-    input[type="text"], select {
-      width: 90%;
-      font-size: 16px;
-    }
-  
-    button {
-      font-size: 16px;
-      padding: 10px 20px;
+    input, select, button {
       width: 90%;
     }
   
     #topScores {
-      width: 95%;
+      padding: 15px;
+    }
+  
+    table {
+      font-size: 0.9rem;
     }
   }
   
